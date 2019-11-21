@@ -59,7 +59,7 @@ void CanHacker::setClock(CAN_CLOCK clock){
 }
 
 CanHacker::ERROR CanHacker::connectCan() {
-    MCP2515::ERROR error = mcp2515->setBitrate(bitrate, canClock);
+    MCP2515::ERROR error = mcp2515->setBitrate(MCP2515::CAN_83K3BPS, canClock);
     if (error != MCP2515::ERROR_OK) {
         writeDebugStream(F("setBitrate error:\n"));
         writeDebugStream((int)error);
