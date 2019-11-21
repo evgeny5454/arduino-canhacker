@@ -168,7 +168,7 @@ CanHacker::ERROR CanHacker::receiveSetBitrateCommand(const char *buffer, const i
             break;
         case '1':
             writeDebugStream(F("Set bitrate 20KBPS\n"));
-            bitrate = CAN_20KBPS;
+            bitrate = CAN_83K3BPS;
             break;
         case '2':
             writeDebugStream(F("Set bitrate 50KBPS\n"));
